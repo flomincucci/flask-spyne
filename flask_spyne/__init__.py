@@ -1,1 +1,1 @@
-from flask_spyne import Spyne, SpyneService, SpyneController
+from .flask_spyne import Spyne, SpyneService, SpyneController

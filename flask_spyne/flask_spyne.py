@@ -67,8 +67,8 @@ class SpyneController(object):
                 def_conf = {
                     'reject-empty-nonce-creation': False,
                 }
-                wsse_conf = dict(def_conf.items() + ctx.service_class.__wsse_conf__.items())
-                for k, v in wsse_conf.items():
+                wsse_conf = dict(list(def_conf.items()) + list(ctx.service_class.__wsse_conf__.items()))
+                for k, v in list(wsse_conf.items()):
                     wsse_conf['wsse-pwd-{0}'.format(k)] = v
                 try:
                     FSWSSE().validate(ctx.in_document, wsse_conf)

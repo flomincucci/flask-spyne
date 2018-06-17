@@ -12,9 +12,9 @@ print(r)
 url = 'http://127.0.0.1:5000/json/anotherservice/echo'
 params = {'str': 'hello world', 'cnt': 3}
 r = requests.get(url=url, params=params)
-print(r.text)
+print((r.text))
 
 url = 'http://127.0.0.1:5000/json/anotherservice/answer'
 params = {'str': 'some question'}
 r = requests.get(url=url, params=params)
-print(r.text)
+print((r.text))
